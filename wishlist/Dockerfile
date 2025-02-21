@@ -31,4 +31,4 @@ RUN npm install --only=production
 
 EXPOSE 8005
 
-CMD ["node", "dist/src/server.js"]
+CMD pnpm run migrate || true && node dist/src/server.js
